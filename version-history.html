@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<title>About Previous</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheets/main.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="inner">
+      <a href="/" class="logo">Previous</a>
+      <button class="mobile-menu"></button>
+      <nav class="navigation-list">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="screenshots.html" class="nav-link">Screenshots</a>
+        <a href="download.html" class="nav-link">Download</a>
+        <a href="version-history.html" class="nav-link">Version History</a>
+      </nav>
+    </div>
+  </header>
+  <section class="main-content">
+    <div class="inner">
+<table>
+<tr>
+<th>Version</th>
+<th>Changes</th>
+</tr>
+<!--
+<tr>
+<td>Version&nbsp;X.X</td>
+<td>
+<ul>
+<li>Fixed something</li>
+<li>New feature</li>
+</ul>
+</td>
+</tr>
+-->
+<tr>
+<td>Version&nbsp;2.3</td>
+<td>
+<ul>
+<li>This version includes an internal NFS server (many thanks to Simon Schubiger for that!). You can now select a shared folder from the GUI. There is no more setup required on the host side. Setup on the guest side is still required but has become a bit simpler. New instructions are included (networking.howto.txt and filesharing.howto.txt).</li>
+<li>There is also a new command line tool (ditool) included that can be used to extract files from raw NeXT formatted disk images.</li>
+<li>Other improvements include refined CPU, FPU and DSP accuracy.</li>
+<li>The stability of network connections has also been improved.</li>
+<li>The new version includes two significant bug fixes: Previous now works with SDL2 v2.0.13 and later and does no longer randomly crash the guest system when booting 68030 guests.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;2.2</td>
+<td>
+<ul>
+<li>This version fixes a bug that was introduced with v2.1 and prevented the reset warning from showing up.</li>
+<li>Furthermore it improves DSP ROM data tables with accurate values.</li>
+<li>Finally it adds a new feature: You can now select what MAC address your emulated machine should have.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;2.1</td>
+<td>
+<ul>
+<li>This version improves emulation efficiency and fixes some bugs in FPU and DSP emulation. You should notice quite some improvement in emulation speed or host CPU usage. Thanks go again to Simon Schubiger for these refinements.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;2.0</td>
+<td>
+<ul>
+<li>Adds support for adding multiple (up to 3) NeXTdimension boards to your emulated Cube (thanks to Simon Schubiger for adding this).</li>
+<li>It also slows down NeXTdimesion a bit to reduce host CPU load.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;1.9</td>
+<td>
+<ul>
+<li>PCAP networking support</li>
+<li>Improved CPU emulation accuracy (from WinUAE)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;1.8</td>
+<td>
+<ul>
+<li>Removed a useless option from the keyboard menu that only caused problems (host keyboard repeat)</li>
+<li>Fixed a bug that caused FPU ROM constants to be slightly off and adds some undocumented constants</li>
+<li>Fixed a bug in the timing system that could cause Previous to get stuck in variable speed mode </li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;1.7</td>
+<td>
+<ul>
+<li>This release concentrates mainly on improving accuracy and reliability. There are not much new features, but it adds the ability to choose between thin wire or twisted pair ethernet connection. This is mostly for the sake of completeness.</li>
+<li>More noticeable changes include faster devices in variable speed mode and more realistic device timings in normal speed mode. Host CPU usage is now almost zero while Previous is paused, which should make it much more "battery friendly".</li>
+<li>Ethernet connection stability has been improved. There should be no more lost connections in regular use.</li>
+<li> Sound no longer causes lags in responsiveness under certain very important use cases (PacMan).  Wink</li>
+<li>Probably the most important improvement is a fix of a long standing 68040 MMU bug that caused kernel panics with the message "Unexpected kernel page fault failure: MMU invalid descriptor during table walk" and some hangs and weird behavior, especially during network transfers.</li>
+<li>Furthermore FPU stability has been improved. It now runs FPSP without any known problem.</li>
+<li>There are also changes that are not visible for the user:</li>
+<li>Previous no longer needs floating point data types. This means it is completely independent from the host's floating point format, which not only improves portability, but also makes it possible to emulate the FPU bit perfect (except for transcendental 68882 instructions, like FSIN, FLOGN, FETOX, which match FPSP results). Previous now has full support for floating point exceptions! This is probably the world's most advanced 68k FPU emulation, by far! Many thanks go to Toni Wilen (WinUAE) for doing lots of FPU tests for me on his Amiga hardware. The changes are also available in the latest version of WinUAE (v2.5).</li>
+<li>There are also some minor improvements. For example Previous no longer crashes, if you run it with write protected disk images.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;1.6</td>
+<td>
+<ul>
+<li>Added SoftFloat FPU emulation (fixes FPU on non-x86 host platforms).</li>
+<li>Added emulation of FPU arithmetic exceptions.</li>
+<li>Added support for a second MO-disk drive</li>
+<li>Improved emulation of dummy RAMDAC.</li>
+<li>Fix for a bug which caused a crash when writing to an NFS server.</li>
+<li>Fix for a bug which prevented sound input under NeXTstep 0.8.</li>
+<li>Fix for a bug which caused temporary speed anomalies after pausing.</li>
+<li>Fix for a bug which prevented NeXTdimension from stopping in rare cases.</li>
+<li>Fix for a bug which caused external i860 interrupts to be delayed.</li>
+</ul>
+</td>
+</tr>
+</table>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="javascript/lib/retina.min.js" type="text/javascript"></script>
+  <script src="javascript/lib/jquery.event.move.js" type="text/javascript"></script>
+  <script src="javascript/lib/jquery.event.swipe.js" type="text/javascript"></script>
+  <script src="javascript/main.js" type="text/javascript"></script>
+</body>
+</html>
