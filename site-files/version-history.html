@@ -38,6 +38,18 @@
 </tr>
 -->
 <tr>
+<td>Version&nbsp;2.4</td>
+<td>
+<ul>
+<li>Previous v2.4 contains a lot of improvements. The most significant new feature is netboot support. You can extract raw disk images with NeXTstep installed to some directory (must be on a case sensitive file system) and use it as root directory for booting (Network > NFS shared directory). The extraction can be done with the command line utility "ditool", which comes with Previous. All versions of NeXTstep except 0.8 can be netbooted, although 0.9 is a bit buggy. Instructions on how to use this new feature are in the source repository and are included with the binary. Many thanks go to Simon Schubiger for adding this great feature! I would not have been able to do this.</li>
+<li>Another highlight is the new internal NetInfo server, which makes networking configuration much easier. The shared directory should now be mounted automatically in /Net/nfs after boot without the need of any setup.</li>
+<li>The new version of Previous also includes improved full screen handling, especially when using multiple screens. It is now possible to dynamically switch between multiple window mode and single window mode.</li>
+<li>The most noticeable bug fixes are improved disk performance when running Mac OS, corrected time and volume adjustment, more reliable network connection, sound recording, NMI and optical disk drive. Less noticeable fixes include fully accurate system control register simulation, SCC and floppy drive passing diagnostic tests and more accurate FSINCOS FPU instruction. You might also notice some changes in mouse movement handling. I hope it is an improvement for those having issues with the mouse.</li>
+<li>Last but not least Previous comes with some improved networking and file sharing instructions. We now have step by step instructions to set up networking and file sharing for all versions of NeXTstep from 0.8 to (OPENSTEP) 4.2!</li>
+</ul>
+</td>
+</tr>
+<tr>
 <td>Version&nbsp;2.3</td>
 <td>
 <ul>
