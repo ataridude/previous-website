@@ -38,6 +38,93 @@
 </tr>
 -->
 <tr>
+<td>Version&nbsp;3.9</td>
+<td>
+<ul>
+<li>This is mostly a bug fix release. It fixes issues related to big files and large file systems. It also improves the accuracy of the internal NFS server regarding error handling and file properties.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;3.8</td>
+<td>
+<ul>
+<li>The key feature of this release is the addition of multiple NFS shared directories. You can connect up to 4 shared directories. The first one can be used for netboot, the other ones for sharing files.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;3.7</td>
+<td>
+<ul>
+<li>Version 3.7 includes a rewritten NFS and NetInfo servers that should be more efficient, more reliable and more accurate than the previous one. It also fixes some memory leaks and orphaned threads during exit.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;3.6</td>
+<td>
+<ul>
+<li>This is just a minor bug fix release. It fixes a regression that caused write protection setting for Floppy, SCSI or Magneto-optical Disk images to be ignored by the GUI.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;3.5</td>
+<td>
+<ul>
+<li>There is now an option for simulating right-click through control-click.</li>
+<li>There is now an option for customizing Previous' internal keyboard shortcuts from the keyboard menu.</li>
+<li>Later versions of NeXTstep no longer report a Floppy drive on the 68030 Cube unless you add one.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;3.4</td>
+<td>
+<ul>
+<li>Conflicting host keyboard shortcuts have been removed. So now you should be able to press shortcuts like command-Q and command-W without invoking host system functions. Thanks to forum member jeffberg for this improvement!</li>
+<li>While auto-locking is disabled, the mouse will no longer get unlocked when using command-click. So if you experiencing problems with your workflow regarding command-click just disable auto-locking and use control-option-M to lock and unlock the mouse.</li>
+<li>The look of the font has been improved. Many thanks to the forum member Rhetorica for this!</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;3.3</td>
+<td>
+<ul>
+<li>The major improvements are support for FTP, SSH, Telnet and HTTP port forwarding via SLiRP and improved throughput of the simulated Ethernet connection.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;3.2</td>
+<td>
+<ul>
+<li>This version adds a dummy Nitro cache so you no longer get an error message when running the power-on DRAM test with Nitro enabled. The update also improves the memory map for device registers. Most of them can be seen at different addresses. It also includes some bug fixes.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;3.1</td>
+<td>
+<ul>
+<li>Addition of Apple Desktop Bus keyboard and mouse. The new devices work with Turbo systems. If you don't like the new devices you can go back to the old ones by unchecking ADB devices in System options under Customize. Non-Turbo systems are not affected by this change.</li>
+<li>Fix for a bug that caused kernel panics during network transfers on 68040 based systems. Therefore updating is highly recommended.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Version&nbsp;3.0</td>
+<td>
+<ul>
+<li>Previous no longer draws the initial VRAM test to the screen. But if you liked it you can enable it in the boot options: Show VRAM during test.</li>
+There are two new empty disk images included with the sources and my binary distribution which are marked with an 'x'. These images will be recognised as the original Maxtor drives that came with the first Cubes. These are auto-detected by early versions of NeXTstep so you don't have to deal with disktab.</li>
+The keyboard preferences now show the actual shortcut keys instead of the default ones so you can look up your customised shortcut keys (see readme for how to customise them).</li>
+</ul>
+</td>
+</tr>
+<tr>
 <td>Version&nbsp;2.6</td>
 <td>
 <ul>
